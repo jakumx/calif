@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1 calificaciones
+  h2
+    | total de calificaciones:&nbsp;
+    b= tamano
+  h3 * las calificaciones van de 0 a 10
+  p
+    | media geometrica&nbsp;
+    b= media_geometrica
+  p
+    | media aritmetica&nbsp;
+    b= media_aritmetica
+  p
+    | varianza&nbsp;
+    b= varianza
+  p
+    | desviacion estandar&nbsp;
+    b= desviacion_estandar
+
+  table
+    tr
+      td id
+      td nombre
+      td calificacion
+      td bimestre
+    each dato in datos
+      tr
+        td= dato.id
+        td= dato.nombre
+        td= dato.calificacion
+        td= dato.bimestre
+
+
